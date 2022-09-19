@@ -13,3 +13,34 @@ export const added = (todoText) => {
     payload: todoText,
   };
 };
+export const toggled = (todoId) => {
+  return {
+    type: TOGGLE,
+    payload: todoId,
+  };
+};
+export const colorselected = (todoId, color) => {
+  return {
+    type: COLORSELECTED,
+    payload: {
+      todoId,
+      color,
+    },
+  };
+};
+export const deleted = (todoId) => {
+  return {
+    type: DELETED,
+    payload: todoId,
+  };
+};
+export const allcompleted = () => {
+  return {
+    type: ALLCOMPLETED,
+  };
+};
+export const clearcompleted = () => {
+  return {
+    type: CLEARCOMPLTED,
+  };
+};
