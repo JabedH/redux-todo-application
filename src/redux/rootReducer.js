@@ -3,7 +3,7 @@ import todosReducer from "./todos/reducer";
 import filterReducer from "./filter/reducer";
 
 const rootReducer = combineReducers({
-  todosReducer,
-  filterReducer,
+  todos: todosReducer,
+  filters: filterReducer,
 });
 export default rootReducer;

@@ -1,5 +1,6 @@
 import { COLORCHANGED, STATUSCHANGED } from "./actionType";
 
+
 export const colorChanged = (color, changeType) => {
   return {
     type: COLORCHANGED,
@@ -9,6 +10,7 @@ export const colorChanged = (color, changeType) => {
     },
   };
 };
+
 export const statusChanged = (status) => {
   return {
     type: STATUSCHANGED,

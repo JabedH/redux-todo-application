@@ -1,5 +1,4 @@
-import { COLORSELECTED } from "../todos/actionType";
-import { STATUSCHANGED, COLORCHANGED } from "./actionType";
+import { COLORCHANGED, STATUSCHANGED } from "./actionType";
 import initialState from "./initialState";
 
 const reducer = (state = initialState, action) => {
@@ -9,8 +8,10 @@ const reducer = (state = initialState, action) => {
         ...state,
         status: action.payload,
       };
-    case COLORSELECTED:
+
+    case COLORCHANGED:
       const { color, changeType } = action.payload;
+
       switch (changeType) {
         case "added":
           return {
@@ -18,19 +19,21 @@ const reducer = (state = initialState, action) => {
             colors: [...state.colors, color],
           };
 
-        case "remove":
+        case "removed":
           return {
             ...state,
             colors: state.colors.filter(
-              (exitingColor) => exitingColor !== color
+              (existingColor) => existingColor !== color
             ),
           };
 
         default:
           return state;
       }
+
     default:
       return state;
   }
 };
+
 export default reducer;

@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import store from "./components/redux/store";
+import store from "./redux/store";
 import TodoList from "./components/TodoList";
 
 function App() {
